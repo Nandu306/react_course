@@ -1,3 +1,6 @@
-ReactDOM.render( React.createElement('h1', {}, 'Hello World!'), document.getElementById('app') );
+ReactDOM.render(
+  <h1> Hello mighty world </h1>,
+  document.getElementById('app')
+);
 
 

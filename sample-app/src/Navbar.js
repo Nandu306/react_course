@@ -1,4 +1,4 @@
-function Navbar() {
+const Navbar = () => {
   return(
     <nav className="navbar-items">
       <img src="./reactfacts.png" alt="logo"/>

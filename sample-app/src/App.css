@@ -48,18 +48,26 @@
 .navbar-items p {
   font-weight: bold;
   color: white;
+  font-size:  20px;
 }
 
 .main-content {
   color: white;
+  padding:  57px 27px;
+  text-align: left;
 
 }
 
-ul {
-  list-style: none;
+.main-content h1 {
+  text-align: left;
+  font-size:  40px;
 }
 
-li::before {
-  content: \2022 ;
-  color:  red;
+.main-content li {
+  padding-block: 10px 10px;
+}
+
+.main-content li::marker {
+  font-size:  1.2rem;
+  color: #61dafb;
 }

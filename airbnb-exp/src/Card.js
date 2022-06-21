@@ -1,20 +1,30 @@
-const Card = () => {
+const Card = (props) => {
+
+  console.log(props);
+
+  let badgeText
+  if (props.element.openSpots === 0) {
+      badgeText = 'SOLD OUT'
+  } else if (props.element.location === "Online") {
+      badgeText = 'ONLINE'
+  }
+
   return(
-    <div className="card">
-      <img src="./katie.jpeg" alt="" className="card-img"/>
+      <div className="card">
+      {badgeText && <div className="card--badge">{badgeText}</div>}
+        <img src={`./${props.element.coverImg}`} alt="" className="card-img"/>
+        <div className ="card-data">
+          <img src="./star.png" alt=""/>
+          <span> {props.element.stats.rating} </span>
+          <span className="gray"> ({props.element.stats.reviewCount}) </span>
+          <span className="gray"> .{props.element.location} </span>
+        </div>
 
-      <div className ="card-data">
-        <img src="./star.png" alt=""/>
-        <span> 5 </span>
-        <span> (30) </span>
-        <span> .USA </span>
+        <div className="card-body">
+          <p> {props.element.tagline} </p>
+          <p> From <b>${props.element.price}</b> / person </p>
+        </div>
       </div>
-
-      <div className="card-body">
-        <p> Life lessons with Katie </p>
-        <p> From $136 / person </p>
-      </div>
-    </div>
   )
 }
 

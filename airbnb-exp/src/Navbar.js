@@ -3,7 +3,6 @@ const Navbar = () => {
     <div className="App-header">
       <img src="./airbnblogo.png" alt=""/>
     </div>
-
   )
 }
 
